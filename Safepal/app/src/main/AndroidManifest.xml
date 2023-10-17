@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="UnusedAttribute">
         <activity android:name=".FAQActivity"
-            android:label="@string/faq_title">
+            android:label="@string/faq_title"
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.unfpa.safepal.home.HomeActivity" />
@@ -21,11 +22,13 @@
         <activity
             android:name=".QuizActivity"
             android:label="@string/title_activity_quiz"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"/>
         <activity
             android:name=".chatmodule.ChatActivity"
             android:label="@string/title_activity_chat"
-            android:parentActivityName=".home.HomeActivity">
+            android:parentActivityName=".home.HomeActivity"
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.unfpa.safepal.home.HomeActivity" />
@@ -33,12 +36,14 @@
         <activity
             android:name=".ReadArticleActivity"
             android:label="@string/title_activity_read_article"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"/>
         <activity
             android:name=".WatchVideoActivity"
             android:label="@string/title_activity_watch_video"
             android:parentActivityName=".DiscoveryActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.unfpa.safepal.DiscoveryActivity" />
@@ -47,7 +52,8 @@
             android:name=".DiscoveryActivity"
             android:label="@string/title_activity_discover_more"
             android:parentActivityName=".home.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.unfpa.safepal.home.HomeActivity" />
@@ -56,7 +62,8 @@
             android:name=".home.HomeActivity"
             android:autoRemoveFromRecents="true"
             android:label="@string/home_activity_title"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -67,12 +74,14 @@
             android:name=".ProvideHelp.CsoActivity"
             android:autoRemoveFromRecents="true"
             android:label="@string/title_activity_contact"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"/>
         <activity
             android:name=".report.ReportingActivity"
             android:label="@string/wsgh_activity_title"
             android:parentActivityName=".home.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.unfpa.safepal.home.HomeActivity" />
@@ -117,6 +126,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID permission"/>
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 

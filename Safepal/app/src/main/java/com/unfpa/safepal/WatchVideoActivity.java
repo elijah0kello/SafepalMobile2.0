@@ -116,7 +116,7 @@ public class WatchVideoActivity extends AppCompatActivity {
         description.setText(videotableCursor.getDescription());
 
         video.setMediaController(new MediaController(this));
-        String lowResVideoUrl = "https://testwebdashboard.safepal.co/content/videos/PREVENTION_5_ENGLISH.mp4";
+        String lowResVideoUrl = BuildConfig.DJANGO_BACKEND_URL +"/content/videos/ENGLISH-LINKAGE.mp4";
         try {
             String videoUrl = videotableCursor.getUrl().replace("http:", "https:");
             lowResVideoUrl = videoUrl.replace(".mp4", "_480p.m3u8");
